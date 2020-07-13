@@ -2,10 +2,9 @@
 
 PREFIX = /usr/local
 
-output: dwmblocks.o
-	gcc dwmblocks.o -lX11 -o dwmblocks
-dwmblocks.o: dwmblocks.c config.h
-	gcc -c -lX11 dwmblocks.c
+all:
+	gcc -O3 -march=native -mavx2 dwmblocks.c -lX11 -o dwmblocks
+	strip --strip-all dwmblocks
 clean:
 	rm -f *.o *.gch dwmblocks
 install: output
