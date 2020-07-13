@@ -1,5 +1,10 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
+
 static const Block blocks[] = {
+	{"", "date \"+%e/%m/%Y  %H:%M  \"", 60, 1},
+};
+
+static const Block _blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"", "cat /tmp/recordingicon 2>/dev/null",	0,	9},
 	/* {"",	"music",	0,	11},*/
@@ -24,7 +29,7 @@ static const Block blocks[] = {
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
-static char *delim = " ";
+static char *delim = "/";
 
 // Have dwmblocks automatically recompile and run when you edit this file in
 // vim with the following line in your vimrc/init.vim:
