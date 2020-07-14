@@ -1,7 +1,8 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 
 static const Block blocks[] = {
-	{"", "date \"+%e/%m/%Y  %H:%M  \"", 60, 1},
+	{"", "mpc --format \"[%artist% - %title%]\"", 0, 11},
+	{"", "  date \"+%e/%m/%Y  %H:%M  \"", 60, 1},
 };
 
 static const Block _blocks[] = {
@@ -29,7 +30,7 @@ static const Block _blocks[] = {
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
-static char *delim = "/";
+static char *delim = "  /  ";
 
 // Have dwmblocks automatically recompile and run when you edit this file in
 // vim with the following line in your vimrc/init.vim:
