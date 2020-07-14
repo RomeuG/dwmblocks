@@ -1,8 +1,9 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 
 static const Block blocks[] = {
+	{"", "find /home/romeu/.mail/personal-email/INBOX/new -type f | wc -l", 900, 12},
 	{"", "mpc --format \"[%artist% - %title%]\"", 0, 11},
-	{"", "  date \"+%e/%m/%Y  %H:%M  \"", 60, 1},
+	{"", "date \"+%e/%m/%Y  %H:%M  \"", 60, 1},
 };
 
 static const Block _blocks[] = {
