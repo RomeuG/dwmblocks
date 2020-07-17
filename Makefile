@@ -5,6 +5,8 @@ PREFIX = /usr/local
 all:
 	gcc -O3 -march=native -mavx2 dwmblocks.c -lX11 -o dwmblocks
 	strip --strip-all dwmblocks
+debug:
+	gcc -O0 -ggdb3 dwmblocks.c -lX11 -o dwmblocks
 clean:
 	rm -f *.o *.gch dwmblocks
 install: output
