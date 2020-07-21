@@ -2,7 +2,7 @@
 
 static const Block blocks[] = {
 	{"", "find /home/romeu/.mail/personal-email/INBOX/new -type f | wc -l", 900, 12},
-	{"", "mpc --format \"[%artist% - %title%]\" | head -n 1", 0, 11},
+	{"", "mpc-get-name-title", 0, 11},
 	{"", "date \"+%e/%m/%Y  %H:%M  \"", 60, 1},
 };
 
